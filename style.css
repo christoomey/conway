@@ -1,0 +1,11 @@
+table.game {
+    border: 1px solid black;
+}
+td {
+    height: 20px;
+    width: 20px;
+}
+
+td.alive {
+    background: black;
+}
