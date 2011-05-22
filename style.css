@@ -9,9 +9,10 @@
     float: right;
 }
 
-table.game {
+table.board {
     float: left;
     border: 1px solid black;
+    border-spacing: 0;
     -moz-box-shadow: 10px 5px 5px #444;
     -webkit-box-shadow: 10px 5px 5px #444;
     box-shadow: 10px 5px 5px #444;
@@ -20,6 +21,9 @@ table.game {
 td {
     height: 20px;
     width: 20px;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 td.alive {
