@@ -1,10 +1,10 @@
 class GameOfLife
     constructor: (@rows, @columns) ->
         @game = ($ '.game')
-        @max_dim = 700 #px
+        @max_dim = 500 #px
 
     initialize: ->
-        @createRow() for i in [1..@rows]
+        @createRow(row_id) for row_id in [1..@rows]
         @scaleCells()
         @configHover()
         @configClick()
@@ -16,10 +16,15 @@ class GameOfLife
         cell_dim = "#{cell_dim}px"
         ($ 'td').css('height', cell_dim).css('width', cell_dim)
 
-    createRow: ->
+    createRow: (row_id) ->
         $row = ($ '<tr>')
-        $row.append('<td class="cell">') for i in [1..@columns]
+        @createCell(row_id, col_id, $row) for col_id in [1..@columns]
         @game.append($row)
+
+    createCell: (row_id, col_id, $row) ->
+        cell_id = "#{row_id}-#{col_id}"
+        console.log cell_id
+        $row.append ($ "<td class='cell' id='#{cell_id}'>")
 
     configHover: ->
         ($ 'td').hover ->
@@ -40,5 +45,5 @@ class GameOfLife
         @game.mouseup =>
             @game.data 'mousedown', false
 
-window.game = new GameOfLife 50, 60
+window.game = new GameOfLife 5, 6
 game.initialize()

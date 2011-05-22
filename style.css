@@ -1,11 +1,22 @@
 .wrapper {
+    position: relative;
+    top: 50px;
     margin: auto;
+    width: 900px;
+}
+
+.controls {
+    float: right;
 }
 
 table.game {
+    float: left;
     border: 1px solid black;
-    margin: auto;
+    -moz-box-shadow: 10px 5px 5px #444;
+    -webkit-box-shadow: 10px 5px 5px #444;
+    box-shadow: 10px 5px 5px #444;
 }
+
 td {
     height: 20px;
     width: 20px;
