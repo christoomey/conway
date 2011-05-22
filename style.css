@@ -1,5 +1,10 @@
+.wrapper {
+    margin: auto;
+}
+
 table.game {
     border: 1px solid black;
+    margin: auto;
 }
 td {
     height: 20px;
@@ -9,3 +14,12 @@ td {
 td.alive {
     background: black;
 }
+
+td.hover {
+    background: yellow;
+}
+
+td.hover.alive {
+    background: #cc0;
+}
+
